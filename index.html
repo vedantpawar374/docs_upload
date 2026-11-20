@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Download Documents</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f7fb;
+      color: #172033;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+
+    main {
+      width: min(680px, 100%);
+      padding: 32px;
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 12px 35px rgba(23, 32, 51, 0.12);
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 28px;
+      text-align: center;
+    }
+
+    p {
+      margin: 0 0 24px;
+      color: #667085;
+      text-align: center;
+    }
+
+    .downloads {
+      display: grid;
+      gap: 12px;
+    }
+
+    .download-button {
+      display: block;
+      width: 100%;
+      padding: 14px 18px;
+      border: 0;
+      border-radius: 10px;
+      background: #2563eb;
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 700;
+      text-align: center;
+      text-decoration: none;
+      transition: background 0.15s ease, transform 0.15s ease;
+    }
+
+    .download-button:hover {
+      background: #1d4ed8;
+      transform: translateY(-1px);
+    }
+
+    .download-button:focus-visible {
+      outline: 3px solid #93c5fd;
+      outline-offset: 3px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Available Downloads</h1>
+    <p>Click a file name to download it.</p>
+
+    <div class="downloads">
+      <a class="download-button" href="./Vedant_DRDO_AHILya.pdf" download="Vedant_DRDO_AHILya.pdf">Vedant_DRDO_AHILya.pdf</a>
+      <a class="download-button" href="./Vedant_DRDO_AHILya.docx" download="Vedant_DRDO_AHILya.docx">Vedant_DRDO_AHILya.docx</a>
+      <a class="download-button" href="./vedant_DRDO_Chandigarh.pdf" download="vedant_DRDO_Chandigarh.pdf">vedant_DRDO_Chandigarh.pdf</a>
+      <a class="download-button" href="./vedant_DRDO_Chandigarh.docx" download="vedant_DRDO_Chandigarh.docx">vedant_DRDO_Chandigarh.docx</a>
+    </div>
+  </main>
+</body>
+</html>
