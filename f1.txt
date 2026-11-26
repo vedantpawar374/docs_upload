@@ -1,0 +1,44 @@
+DECLARE
+ v_price NUMBER;
+ v_quantity NUMBER;
+ v_item_cost NUMBER;
+ v_total_bill NUMBER := 0;
+ v_discount NUMBER := 0;
+ v_final_bill NUMBER;
+BEGIN
+ -- Item 1
+ v_price := 1000;
+ v_quantity := 2;
+ v_item_cost := v_price * v_quantity;
+ v_total_bill := v_total_bill + v_item_cost;
+ DBMS_OUTPUT.PUT_LINE('Item 1 Cost = Rs. ' || v_item_cost);
+ -- Item 2
+ v_price := 1500;
+ v_quantity := 2;
+ v_item_cost := v_price * v_quantity;
+ v_total_bill := v_total_bill + v_item_cost;
+ DBMS_OUTPUT.PUT_LINE('Item 2 Cost = Rs. ' || v_item_cost);
+ -- Item 3
+ v_price := 2500;
+ v_quantity := 1;
+ v_item_cost := v_price * v_quantity;
+ v_total_bill := v_total_bill + v_item_cost;
+ DBMS_OUTPUT.PUT_LINE('Item 3 Cost = Rs. ' || v_item_cost);
+ -- Apply discount
+ IF v_total_bill >= 10000 THEN
+ v_discount := v_total_bill * 0.20;
+ ELSIF v_total_bill >= 5000 THEN
+ v_discount := v_total_bill * 0.10;
+ ELSIF v_total_bill >= 2000 THEN
+ v_discount := v_total_bill * 0.05;
+ ELSE
+ v_discount := 0;
+ END IF;
+ -- Calculate final bill
+ v_final_bill := v_total_bill - v_discount;
+ -- Display result
+ DBMS_OUTPUT.PUT_LINE('-------------------------');
+ DBMS_OUTPUT.PUT_LINE('Total Bill = Rs. ' || v_total_bill);
+ DBMS_OUTPUT.PUT_LINE('Discount = Rs. ' || v_discount);
+ DBMS_OUTPUT.PUT_LINE('Final Bill = Rs. ' || v_final_bill);
+END;
